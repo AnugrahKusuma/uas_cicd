@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h1>Selamat Datang di Quiz</h1>
+            <p>Terdapat 20 pertanyaan yang harus dijawab</p>
+            <button class="button" onclick="startQuiz()">Mulai Kuis</button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container">
+            <div id="progress">
+                Soal <span id="current-question">1</span> dari 20
+            </div>
+            <div class="question">
+                <h2 id="question-text"></h2>
+                <div class="options" id="options-container">
+                </div>
+            </div>
+            <button class="button" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen">
+            <h1>Hasil Quiz</h1>
+            <p>Skor anda: <span id="score">0</span> dari 20</p>
+            <div id="review-container"></div>
+            <button class="button" onclick="showReview()">Lihat Review Jawaban</button>
+            <button class="button" onclick="restartQuiz()">Mulai Ulang</button>
+        </div>
+
+        <!-- Review Screen -->
+        <div id="review-screen" style="display: none;">
+            <h1>Review Jawaban</h1>
+            <div id="review-answers"></div>
+            <button class="button" onclick="backToResult()">Kembali ke Hasil</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
